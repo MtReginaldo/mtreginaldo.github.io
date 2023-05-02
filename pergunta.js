@@ -3,12 +3,10 @@ const personagens = ["Buzz Lightear", "Dexter", "Dick Vigarista", "Doutora Brinq
                     "Eustácio", "Fred Flinstone", "Girafales", "Guido", "Johnny Bravo", 
                     "Linguini", "Lula Molusco", "Mario", "Popeye", "Earl", "Prefeito", 
                     "Sherlock Holmes", "Vicky", "Woody", "Homer Simpson"];
-
 const pic = ["img/Buzz.png", "img/Dexter.png", "img/Dick.png", "img/Doutora.png", "img/Edna.png"
             , "img/Eustacio.png", "img/Fred.png", "img/Girafales.png", "img/Guido.png", "img/Johnny.png"
             , "img/Linguini.png", "img/Lula.png", "img/Mario.png", "img/Popeye.png", "img/Earl.png"
             , "img/Prefeito.png", "img/Sherlock.png", "img/Vicky.png", "img/Woody.png", "img/Homer.png"];
-
 for (var i = 0; i < pic.length; i++) { //Mostra imagens dos personagens
     var img = document.createElement("img");
     img.src = pic[i];
@@ -20,13 +18,13 @@ for (var i = 0; i < pic.length; i++) { //Mostra imagens dos personagens
 const indiceAleatorio = Math.floor(Math.random() * personagens.length);
 const personagemAleatorio = personagens[indiceAleatorio];
 document.getElementById("personagem").innerHTML = personagemAleatorio;
-document.getElementById("iniciar").style.display = "none";
+
 
 var exibiuSim = false;
 var exibiuNao = false;
 
 // Array com as perguntas
-var perguntas = [ "Seu personagem está usando óculos?", "Seu personagem está usando chapéu?", "Seu personagem tem bigode?", "Seu personagem é masculino?", "Seu personagem é careca?", "Seu personagem é loiro?", "Seu personagem tem cabelo marrom?", "Seu personagem tem cabelo preto?" ];
+var perguntasTela = [ "Seu personagem está usando óculos?", "Seu personagem está usando chapéu?", "Seu personagem tem bigode?", "Seu personagem é masculino?", "Seu personagem é careca?", "Seu personagem é loiro?", "Seu personagem tem cabelo marrom?", "Seu personagem tem cabelo preto?" ];
 var perguntasIA = [ "Seu personagem está usando óculos?", "Seu personagem está usando chapéu?", "Seu personagem tem bigode?", "Seu personagem é masculino?", "Seu personagem é careca?", "Seu personagem é loiro?", "Seu personagem tem cabelo marrom?", "Seu personagem tem cabelo preto?" ];
 var removerPersonagensJogador = [ "Buzz Lightear", "Dexter", "Dick Vigarista", "Doutora Brinquedos", "Edna Moda", "Eustácio", "Fred Flinstone", "Girafales", "Guido", "Johnny Bravo", "Linguini", "Lula Molusco", "Mario", "Popeye", "Earl", "Prefeito", "Sherlock Holmes", "Vicky", "Woody", "Homer Simpson" ];
 var removerPersonagensIA = [ "Buzz Lightear", "Dexter", "Dick Vigarista", "Doutora Brinquedos", "Edna Moda", "Eustácio", "Fred Flinstone", "Girafales", "Guido", "Johnny Bravo", "Linguini", "Lula Molusco", "Mario", "Popeye", "Earl", "Prefeito", "Sherlock Holmes", "Vicky", "Woody", "Homer Simpson" ];
@@ -38,17 +36,18 @@ document.getElementById("removerPersonagensIA").innerHTML = removerPersonagensIA
 
 // Função para exibir a pergunta atual no HTML
 function exibirPergunta() {
-  document.getElementById("pergunta").innerHTML = perguntas[0];
+  document.getElementById("pergunta").innerHTML = perguntasTela[indice];
 }
 
 // Função para avançar para a próxima pergunta
 function proximaPergunta() {
     indice++;
-    if (indice >= perguntas.length) {
+    if (indice >= perguntasTela.length) {
       indice = 0; // Reinicia a lista de perguntas se chegar ao fim
     }
     exibirPergunta();
-  }
+}
+
 
 function perguntarApagar(){
 
@@ -85,8 +84,8 @@ function perguntarApagar(){
         }
     }
 
-    // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!
-    const respostaIA = window.confirm(perguntasIA[indice++]); 
+        // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!
+        const respostaIA = window.confirm(perguntasIA[indice++]); 
 
         // Verificar a resposta do usuário
         if (respostaIA) {
@@ -245,4 +244,3 @@ function perguntarApagar(){
 }  
 
 exibirPergunta(); // Exibe a primeira pergunta // Lista de perguntas ++ 
-
