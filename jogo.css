@@ -1,0 +1,152 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #183651;
+}
+
+.rodando {
+    animation: rotation 2s infinite linear;
+}
+
+.tudo{
+    position: absolute;
+    width: 100%;
+    max-width: 80%;
+    padding: 10px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;    
+}
+
+.imgcontainer{
+    position: relative;
+}
+
+img {
+    max-width: 100px;
+    max-height: auto;
+    position: relative;
+  }
+
+.cola{
+    color: #183651;
+}
+
+select{
+    display:inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    border: 5px solid #000000;
+    border-radius: 8px;
+    background-color: #629fbb;
+    box-shadow: 7px 7px 7px rgb(32, 28, 28);
+    font-weight: bold;
+}
+
+select{
+    margin: 10px 10px;
+    padding: 10px;
+    border: 5px solid #000000;
+    border-radius: 8px;
+    background-color: #629fbb;
+    box-shadow: 7px 7px 7px rgb(32, 28, 28);
+    font-weight: bold;
+}
+
+button{
+    text-align: right;
+    display:inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    border: 5px solid #000000;
+    border-radius: 8px;
+    background-color: rgb(240, 52, 52);
+    box-shadow: 7px 7px 7px rgb(32, 28, 28);
+    font-weight: bold;
+}
+
+button:hover{
+    color: #7c0101;
+    font-size: 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    background-color: #3d9dca;
+    padding: 10px;
+    border-radius: 10px;
+    border: 10px solid;
+    text-align: center;
+    font-weight: bold;
+}
+
+.acontainer {
+    position: relative;
+    width: 100%;
+    max-width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.zcontainer {
+    position: relative;
+    width: auto;
+    max-width: auto;
+    background-color: #3d9dca;
+    padding: 10px;
+    border-radius: 10px;
+    border: 10px solid;
+    text-align: center;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+.fundopergunta{
+    background-color: #629fbb;
+    border: 1px solid #112b36;
+    padding: 10px;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.escolhas {
+    position: relative;
+    width: auto;
+    max-width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.escolhido {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    background-color: #3d9dca;
+    padding: 10px;
+    border-radius: 10px;
+    border: 10px solid;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.log {
+    position: relative;
+    width: auto;
+    max-width: auto;
+    background-color: #3d9dca;
+    padding: 10px;
+    border-radius: 10px;
+    border: 10px solid;
+    text-align: left;
+    margin-top: 5px;
+}
