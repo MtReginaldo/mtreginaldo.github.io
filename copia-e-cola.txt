@@ -1,0 +1,17 @@
+        // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!
+        const respostaIA = window.confirm(perguntasIA[indice++]); 
+
+        // Verificar a resposta do usuário
+        if (respostaIA) {
+            // O usuário respondeu "Sim"
+            var itensARemover = ["Buzz Lightear", "Dick", "Fred Flinstone", "Girafales", "Guido", "Linguini", "Lula Molusco", "Mario", "Popeye", "Policial", "Sherlock Holmes", "Woody", "Homer Simpson"];
+                removerPersonagensIA = removerPersonagensIA.filter(function(lista) {
+                    return itensARemover.includes(lista);   
+                });
+        } else {
+            // O usuário respondeu "Não"
+            var itensARemover = ["Edna Moda", "Dexter", "Eustácio", "Johnny Bravo"];
+            removerPersonagensIA = removerPersonagensIA.filter(function(lista) {
+                return itensARemover.includes(lista);             
+            });        
+        }
