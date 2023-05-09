@@ -24,10 +24,11 @@ var exibiuSim = false;
 var exibiuNao = false;
 
 // Array com as perguntas
-var perguntasTela = [ "Seu personagem está usando óculos?", "Seu personagem está usando chapéu?", "Seu personagem tem bigode?", "Seu personagem é masculino?", "Seu personagem é careca?", "Seu personagem é loiro?", "Seu personagem tem cabelo marrom?", "Seu personagem tem cabelo preto?" ];
-var perguntasIA = [ "Seu personagem está usando óculos?", "Seu personagem está usando chapéu?", "Seu personagem tem bigode?", "Seu personagem é masculino?", "Seu personagem é careca?", "Seu personagem é loiro?", "Seu personagem tem cabelo marrom?", "Seu personagem tem cabelo preto?" ];
+var perguntasTela = [ "Seu personagem está usando óculos?", "Seu personagem está usando chapéu?", "Seu personagem tem bigode?", "Seu personagem é masculino?", "Seu personagem é careca?", "Seu personagem é loiro?", "Seu personagem tem cabelo marrom?", "Seu personagem tem cabelo preto?", "Seu personagem é humano?"];
+var perguntasIA = [ "Seu personagem está usando óculos?", "Seu personagem está usando chapéu?", "Seu personagem tem bigode?", "Seu personagem é masculino?", "Seu personagem é careca?", "Seu personagem é loiro?", "Seu personagem tem cabelo marrom?", "Seu personagem tem cabelo preto?", "Seu personagem é humano?" ];
 var removerPersonagensJogador = [ "Buzz Lightear", "Dexter", "Dick Vigarista", "Doutora Brinquedos", "Edna Moda", "Eustácio", "Fred Flinstone", "Girafales", "Guido", "Johnny Bravo", "Linguini", "Lula Molusco", "Mario", "Popeye", "Earl", "Prefeito", "Sherlock Holmes", "Vicky", "Woody", "Homer Simpson" ];
 var removerPersonagensIA = [ "Buzz Lightear", "Dexter", "Dick Vigarista", "Doutora Brinquedos", "Edna Moda", "Eustácio", "Fred Flinstone", "Girafales", "Guido", "Johnny Bravo", "Linguini", "Lula Molusco", "Mario", "Popeye", "Earl", "Prefeito", "Sherlock Holmes", "Vicky", "Woody", "Homer Simpson" ];
+
 // Índice da pergunta atual
 var indice = 0;
 
@@ -46,6 +47,29 @@ function proximaPergunta() {
       indice = 0; // Reinicia a lista de perguntas se chegar ao fim
     }
     exibirPergunta();
+}
+
+
+function perguntaRobo(){
+
+    // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!
+    const respostaIA = window.confirm(perguntasIA[indice++]); 
+
+    // Verificar a resposta do usuário
+    if (respostaIA) {
+        // O usuário respondeu "Sim"
+        var itensARemover = ["Buzz Lightear"];
+        removerPersonagensIA = removerPersonagensIA.filter(function(lista) {
+            return !itensARemover.includes(lista);   
+        });
+        } else {
+        // O usuário  respondeu "Não"
+        var itensARemover = ["Woody"];
+        removerPersonagensIA = removerPersonagensIA.filter(function(lista) {
+            return !itensARemover.includes(lista);             
+        });        
+        }
+
 }
 
 
@@ -69,23 +93,23 @@ function perguntarApagar(){
     switch (indice){
 
         case 0: //  "Seu personagem está usando óculos?"
-        var exibiuSim = false;
-        var exibiuNao = false;
-        const personagensOculos = ["Edna Moda", "Dexter","Eustácio", "Johnny Bravo"];
-        if (personagensOculos.includes(personagemAleatorio)){
-            var itensARemover = ["Buzz Lightear", "Dick Vigarista", "Doutora Brinquedos", "Fred Flinstone", "Girafales", "Guido", "Linguini", "Lula Molusco", "Mario", "Popeye", "Earl", "Prefeito", "Sherlock Holmes", "Vicky", "Woody", "Homer Simpson"]
-            removerPersonagensJogador = removerPersonagensJogador.filter(function(lista) {
-                exibirSim(); // Exibe a mensagem de "Sim" apenas uma vez
-                return !itensARemover.includes(lista);   
-            });
-       
-        } else {
-            var itensARemover = ["Edna Moda", "Dexter", "Eustácio", "Johnny Bravo"]
-            removerPersonagensJogador = removerPersonagensJogador.filter(function(lista) {
-                exibirNao(); // Exibe a mensagem de "Não" apenas uma vez
-                return !itensARemover.includes(lista);             
-            });
-        }
+            var exibiuSim = false;
+            var exibiuNao = false;
+            const personagensOculos = ["Edna Moda", "Dexter","Eustácio", "Johnny Bravo"];
+            if (personagensOculos.includes(personagemAleatorio)){
+                var itensARemover = ["Buzz Lightear", "Dick Vigarista", "Doutora Brinquedos", "Fred Flinstone", "Girafales", "Guido", "Linguini", "Lula Molusco", "Mario", "Popeye", "Earl", "Prefeito", "Sherlock Holmes", "Vicky", "Woody", "Homer Simpson"]
+                removerPersonagensJogador = removerPersonagensJogador.filter(function(lista) {
+                    exibirSim(); // Exibe a mensagem de "Sim" apenas uma vez
+                    return !itensARemover.includes(lista);   
+                });
+            } else {
+                var itensARemover = ["Edna Moda", "Dexter", "Eustácio", "Johnny Bravo"]
+                removerPersonagensJogador = removerPersonagensJogador.filter(function(lista) {
+                    exibirNao(); // Exibe a mensagem de "Não" apenas uma vez
+                    return !itensARemover.includes(lista);             
+                });
+            }
+            perguntaRobo();
         break
 
         case 1: // "Seu personagem está usando chapéu?"
@@ -226,6 +250,26 @@ function perguntarApagar(){
             });
         }     
         break
+
+        case 8: //  "Seu personagem é humano?"
+        var exibiuSim = false;
+        var exibiuNao = false;
+        const personagensHumanos = ["Dexter", "Dick Vigarista", "Doutora Brinquedos", "Edna Moda", "Eustácio", "Fred Flinstone", "Girafales", "Johnny Bravo", "Linguini", "Mario", "Popeye", "Earl", "Prefeito", "Sherlock Holmes", "Vicky", "Homer Simpson" ];
+        if (personagensHumanos.includes(personagemAleatorio)){
+            var itensARemover = ["Buzz Lightear", "Guido", "Lula Molusco", "Woody"];
+            removerPersonagensJogador = removerPersonagensJogador.filter(function(lista) {
+                exibirSim(); // Exibe a mensagem de "Sim" apenas uma vez
+                return !itensARemover.includes(lista);   
+            });
+       
+        } else {
+            var itensARemover = ["Dexter", "Dick Vigarista", "Doutora Brinquedos", "Edna Moda", "Eustácio", "Fred Flinstone", "Girafales", "Johnny Bravo", "Linguini", "Mario", "Popeye", "Earl", "Prefeito", "Sherlock Holmes", "Vicky", "Homer Simpson" ];
+            removerPersonagensJogador = removerPersonagensJogador.filter(function(lista) {
+                exibirNao(); // Exibe a mensagem de "Não" apenas uma vez
+                return !itensARemover.includes(lista);             
+            });
+        }
+        break
     }
 
     document.getElementById("imageContainer").appendChild(img);
@@ -239,7 +283,7 @@ function perguntarApagar(){
 
     if (removerPersonagensIA.length === 1) {
     const personagemRestanteIA = removerPersonagensIA.pop();
-    window.alert(`Parabéns! Você adivinhou! O personagem que escolhi foi ${personagemRestanteIA}.`);
+    window.alert(`Já sei! Seu personagem é ${personagemRestanteIA}.`);
     }
 
     else{
