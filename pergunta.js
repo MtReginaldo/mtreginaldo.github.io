@@ -58,13 +58,20 @@ function proximaPergunta() {
     exibirPergunta();
 }
 
+function proximaPerguntaRobo() {
+    indice++;
+    if (indiceRobo >= perguntasIA.length) {
+        indiceRobo = 0; // Reinicia a lista de perguntas se chegar ao fim
+    }
+    document.getElementById("indiceRobo").innerHTML = indiceRobo;
+}
 
 function perguntaRobo(){
 
     // Verificar a resposta do usuário
     switch (indiceRobo){
 
-        case 0:
+        case 0: //  "Seu personagem está usando óculos?"
         // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!      
         var respostaIA = window.confirm(perguntasIA[indiceRobo]);             
         if (respostaIA) {
@@ -80,9 +87,10 @@ function perguntaRobo(){
             return !itensARemover.includes(lista);             
         });        
         }
+        indiceRobo++;
         break
 
-        case 1:
+        case 1: // "Seu personagem está usando chapéu?"
         // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!      
         var respostaIA = window.confirm(perguntasIA[indiceRobo]);             
         if (respostaIA) {
@@ -100,7 +108,7 @@ function perguntaRobo(){
         }
         break
 
-        case 2:
+        case 2: // "Seu personagem tem bigode?"
         // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!      
         var respostaIA = window.confirm(perguntasIA[indiceRobo]);             
         if (respostaIA) {
@@ -118,7 +126,7 @@ function perguntaRobo(){
         }
         break
 
-        case 3:
+        case 3: // "Seu personagem é masculino?"
         // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!      
         var respostaIA = window.confirm(perguntasIA[indiceRobo]);             
         if (respostaIA) {
@@ -136,7 +144,7 @@ function perguntaRobo(){
         }
         break
         
-        case 4:
+        case 4: // "Seu personagem é careca?"
         // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!      
         var respostaIA = window.confirm(perguntasIA[indiceRobo]);             
         if (respostaIA) {
@@ -155,7 +163,7 @@ function perguntaRobo(){
         break
         
         
-        case 5:
+        case 5: //  "Seu personagem tem cabelos loiros?" 
         // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!      
         var respostaIA = window.confirm(perguntasIA[indiceRobo]);             
         if (respostaIA) {
@@ -174,7 +182,7 @@ function perguntaRobo(){
         break
         
         
-        case 6:
+        case 6: //  "Seu personagem tem cabelos castanhos?"
         // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!      
         var respostaIA = window.confirm(perguntasIA[indiceRobo]);             
         if (respostaIA) {
@@ -192,7 +200,7 @@ function perguntaRobo(){
         }
         break
         
-        case 7:
+        case 7: //  "Seu personagem tem cabelos pretos?"
         // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!      
         var respostaIA = window.confirm(perguntasIA[indiceRobo]);             
         if (respostaIA) {
@@ -210,7 +218,7 @@ function perguntaRobo(){
         }
         break        
 
-        case 8:
+        case 8: //  "Seu personagem é humano?"
         // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!      
         var respostaIA = window.confirm(perguntasIA[indiceRobo]);             
         if (respostaIA) {
@@ -226,18 +234,20 @@ function perguntaRobo(){
             return !itensARemover.includes(lista);             
         });        
         }
-        break
-        
+        break       
     }
+
+    document.getElementById("removerPersonagensIA").innerHTML = removerPersonagensIA;
+
 
     if (removerPersonagensIA.length === 1) {
         const personagemRestanteIA = removerPersonagensIA.pop();
-        window.alert(`Já sei! Seu personagem é ${personagemRestanteIA}. Você perdeu!`);
+        window.alert("Já sei! Seu personagem é ${personagemRestanteIA}. Você perdeu!");
         }
     
-        else{
-            return null
-        }  
+    else{
+        return null
+    }  
 
 }
 
