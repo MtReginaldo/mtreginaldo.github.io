@@ -38,7 +38,7 @@ var removerPersonagensIA = [ "Buzz Lightear", "Dexter", "Dick Vigarista", "Douto
 var indice = 0;
 
 // Seleciona pergunta aleatoriamente a primeira pergunta do robô
-const indiceRobo = Math.floor(Math.random() * perguntas.length);
+var indiceRobo = Math.floor(Math.random() * perguntas.length);
 
 document.getElementById("removerPersonagensJogador").innerHTML = removerPersonagensJogador;
 document.getElementById("removerPersonagensIA").innerHTML = removerPersonagensIA;
@@ -58,36 +58,36 @@ function proximaPergunta() {
     exibirPergunta();
 }
 
-function proximaPerguntaRobo() {
-    indice++;
-    if (indiceRobo >= perguntasIA.length) {
-        indiceRobo = 0; // Reinicia a lista de perguntas se chegar ao fim
-    }
-    document.getElementById("indiceRobo").innerHTML = indiceRobo;
-}
-
 function perguntaRobo(){
+
+    function proximaPerguntaRobo(){
+        indiceRobo++;
+        if (indiceRobo >= perguntasIA.length) {
+            indiceRobo = 0; // Reinicia a lista de perguntas se chegar ao fim
+        }
+        document.getElementById("indiceRobo").innerHTML = indiceRobo;
+    }
 
     // Verificar a resposta do usuário
     switch (indiceRobo){
 
         case 0: //  "Seu personagem está usando óculos?"
-        // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!      
-        var respostaIA = window.confirm(perguntasIA[indiceRobo]);             
-        if (respostaIA) {
-        // O usuário respondeu "Sim"
-        var itensARemover = ["Buzz Lightear", "Dick Vigarista", "Doutora Brinquedos", "Fred Flinstone", "Girafales", "Guido", "Linguini", "Lula Molusco", "Mario", "Popeye", "Earl", "Prefeito", "Sherlock Holmes", "Vicky", "Woody", "Homer Simpson"]
-        removerPersonagensIA = removerPersonagensIA.filter(function(lista) {
-            return !itensARemover.includes(lista);   
-        });
-        } else {
-        // O usuário  respondeu "Não"
-        var itensARemover = ["Edna Moda", "Dexter", "Eustácio", "Johnny Bravo"];
-        removerPersonagensIA = removerPersonagensIA.filter(function(lista) {
-            return !itensARemover.includes(lista);             
-        });        
-        }
-        indiceRobo++;
+            // Exibir a pergunta em uma janela de confirmação PERGUNTA DO ROBO!!!!!!!!!      
+            var respostaIA = window.confirm(perguntasIA[indiceRobo]);             
+            if (respostaIA) {
+                // O usuário respondeu "Sim"
+                var itensARemover = ["Buzz Lightear", "Dick Vigarista", "Doutora Brinquedos", "Fred Flinstone", "Girafales", "Guido", "Linguini", "Lula Molusco", "Mario", "Popeye", "Earl", "Prefeito", "Sherlock Holmes", "Vicky", "Woody", "Homer Simpson"]
+                removerPersonagensIA = removerPersonagensIA.filter(function(lista) {
+                    return !itensARemover.includes(lista);   
+                });
+            } else {
+                // O usuário  respondeu "Não"
+                var itensARemover = ["Edna Moda", "Dexter", "Eustácio", "Johnny Bravo"];
+                removerPersonagensIA = removerPersonagensIA.filter(function(lista) {
+                    return !itensARemover.includes(lista);             
+                })
+            }
+        proximaPerguntaRobo()
         break
 
         case 1: // "Seu personagem está usando chapéu?"
@@ -106,6 +106,7 @@ function perguntaRobo(){
             return !itensARemover.includes(lista);             
         });        
         }
+        proximaPerguntaRobo()
         break
 
         case 2: // "Seu personagem tem bigode?"
@@ -124,6 +125,7 @@ function perguntaRobo(){
             return !itensARemover.includes(lista);             
         });        
         }
+        proximaPerguntaRobo()
         break
 
         case 3: // "Seu personagem é masculino?"
@@ -142,6 +144,7 @@ function perguntaRobo(){
             return !itensARemover.includes(lista);             
         });        
         }
+        proximaPerguntaRobo()
         break
         
         case 4: // "Seu personagem é careca?"
@@ -160,6 +163,7 @@ function perguntaRobo(){
             return !itensARemover.includes(lista);             
         });        
         }
+        proximaPerguntaRobo()
         break
         
         
@@ -179,6 +183,7 @@ function perguntaRobo(){
             return !itensARemover.includes(lista);             
         });        
         }
+        proximaPerguntaRobo()
         break
         
         
@@ -198,6 +203,7 @@ function perguntaRobo(){
             return !itensARemover.includes(lista);             
         });        
         }
+        proximaPerguntaRobo()
         break
         
         case 7: //  "Seu personagem tem cabelos pretos?"
@@ -216,6 +222,7 @@ function perguntaRobo(){
             return !itensARemover.includes(lista);             
         });        
         }
+        proximaPerguntaRobo()
         break        
 
         case 8: //  "Seu personagem é humano?"
@@ -234,6 +241,7 @@ function perguntaRobo(){
             return !itensARemover.includes(lista);             
         });        
         }
+        proximaPerguntaRobo()
         break       
     }
 
