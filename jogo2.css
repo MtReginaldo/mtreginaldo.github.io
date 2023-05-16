@@ -1,0 +1,177 @@
+header{
+    background: #183651;
+    padding: 2px 2px;
+}
+
+body{
+    background: #183651;
+    padding: 5px 0;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+/*Inicio Cabeçalho*/
+#LogoJogo{
+    width: 700px;
+    height: 50px;
+    margin: 10px 10px;
+    padding: 5px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 7px 7px 7px rgb(32, 28, 28);
+}
+
+.caixa{
+    position: relative;
+    width: 940px;
+    margin: 0px 0px 0px 590px;
+    display:inline-block;
+}
+
+nav{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav li{
+    display:inline-block;
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+    border: 5px solid #000000;
+    border-radius: 8px;
+    background-color: rgb(240, 52, 52);
+    box-shadow: 7px 7px 7px rgb(32, 28, 28);
+}
+
+nav a{
+    font-family:'Courier New', Courier, monospace;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav li:hover, nav a:hover{
+    color: #7c0101;
+    font-size: 20px;
+}
+
+nav li:active{
+    border-color:#138891
+
+}
+
+nav a:active{
+    color:#138891
+}
+/*Fim Cabeçalho*/
+/*Inicio Rodapé*/
+footer{
+    text-align: center;
+    background: #3d9dca;
+    padding: 3px;
+    margin: 15px 2px 2px 2px;
+}
+
+#Univille{
+    position: relative;
+    width: 4%;
+    margin: 0.5px;
+}
+/*Fim Rodapé*/
+/*Inicio Corpo*/
+.rodando {
+    animation: rotation 2s infinite linear;
+}
+/*Botões de Pergunta*/
+button{
+    text-align: right;
+    display:inline-block;
+    margin: 15px 15px;
+    padding: 10px;
+    border: 5px solid #000000;
+    border-radius: 8px;
+    background-color: rgb(240, 52, 52);
+    box-shadow: 7px 7px 7px rgb(32, 28, 28);
+    font-weight: bold;
+}
+/*Seleção do Personagem*/
+select{
+    display:inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    border: 5px solid #000000;
+    border-radius: 8px;
+    background-color: #629fbb;
+    box-shadow: 7px 7px 7px rgb(32, 28, 28);
+    font-weight: bold;
+}
+
+button:hover{
+    color: #7c0101;
+    font-size: 15px;
+}
+
+.fundopergunta{
+    background-color: #629fbb;
+    border: 1px solid #112b36;
+    padding: 10px;
+    width: 400px;
+    height: 15px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 140px;
+    max-height: auto;
+    position: relative;
+    margin: 4px;
+}
+
+.Personagens{
+    display: inline-block;
+    background-color: #3d9dca;
+    border: 5px solid #7c0101;
+    width: 1486px;
+    height: 320px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    align-self: self-end;
+    justify-content: center;
+}
+
+.Escolha{
+    display:inline-flex;
+}
+
+#EscolhaPersonagem{
+    font-family:'Courier New', Courier, monospace;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.perguntas, .PersonagemJogador{
+    position: relative;
+    background-color: #3d9dca;
+    border: 5px solid #7c0101;
+    width: 700px;
+    height: 100px;
+    padding: 19px;
+    margin: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.cola{
+    color: #183651;
+    margin: 15px;
+}

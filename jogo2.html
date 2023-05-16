@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Quem Sou Eu?</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="jogo2.css">
+        <link
+        rel="stylesheet"
+        href="https://pyscript.net/latest/pyscript.css"
+        />
+        <link rel="stylesheet" href="./assets/css/examples.css" />
+        <script defer src="pergunta.js"></script>
+    </head>
+
+    <header>
+        <div class="caixa">
+            <h1><img id = "LogoJogo" src="img/logojogo.png" alt="LogoJogo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="mododejogar.html">Modo de Jogar</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="index.html">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <body>
+        <div class = "Personagens">
+            <p id = "EscolhaPersonagem">Escolha seu Personagem:</p>
+            <div class="imgcontainer" id="imageContainer"></div>
+        </div>
+        <div class = Escolha>
+            <div class = "PersonagemJogador">
+                <form>
+                    <label id = "EscolhaPersonagem" for="personagens">Selecione o Personagem Escolhido:</label>
+                    <select id="personagens" name="personagens">
+                        <option value="personagen"> Selecione um personagem </option>
+                        <option value="personagen"> Buzz Lightear </option>
+                        <option value="personagen"> Dexter </option>
+                        <option value="personagen"> Dick Vigarista </option>
+                        <option value="personagen"> Doutora Brinquedos </option>
+                        <option value="personagen"> Edna Moda </option>
+                        <option value="personagen"> Eustácio </option>
+                        <option value="personagen"> Fred Flinstone </option>
+                        <option value="personagen"> Girafales </option>
+                        <option value="personagen"> Guido </option>
+                        <option value="personagen"> Johnny Bravo </option>
+                        <option value="personagen"> Linguini </option>
+                        <option value="personagen"> Lula Molusco </option>
+                        <option value="personagen"> Mario </option>
+                        <option value="personagen"> Popeye </option>
+                        <option value="personagen"> Earl </option>
+                        <option value="personagen"> Prefeito </option>
+                        <option value="personagen"> Sherlock Holmes </option>
+                        <option value="personagen"> Vicky </option>
+                        <option value="personagen"> Woody </option>                               
+                        <option value="personagen"> Homer Simpson </option>                               
+                    </select>
+                </form> 
+            </div>
+            <div class = "perguntas">
+                <p>Escolha sua pergunta:</p>
+                <div class = "cLinha"> 
+                    <div class="fundopergunta">
+                        <p id="pergunta"></p>
+                    </div>
+                    <button onclick="proximaPergunta()">Próxima Pergunta</button>
+                    <button onclick="perguntarApagar()">Perguntar</button>
+                </div>
+                    <div>
+                        <div class="cola" id="personagem"></div>
+                        <div class="cola" id="indiceRobo"></div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <img id = "Univille" src="img/logoUniville.png" alt="Univille">
+    </footer>
+</html>

@@ -23,7 +23,7 @@ body{
 .caixa{
     position: relative;
     width: 940px;
-    margin: 0px 0px 0px 590px;
+    margin: 0px 0px 0px 650px;
     display:inline-block;
 }
 
@@ -34,8 +34,9 @@ nav{
 }
 
 nav li{
+    text-align: right;
     display:inline-block;
-    margin: 10px;
+    margin: 10px 10px 10px 0px;
     padding: 10px;
     border: 5px solid #000000;
     border-radius: 8px;
@@ -65,10 +66,10 @@ nav a:active{
     color:#138891
 }
 
-#ComoJogar, #Regras{
-    font-size: 20px;
-    margin: 20px 40px 38px 40px;
-    padding: 20px;
+#SobreNos{
+    font-size: 30px;
+    margin: 94px 150px 110px 150px;
+    padding: 12px;
     border: 5px solid #000000;
     border-radius: 8px;
     background-color: #3d9dca;
@@ -79,11 +80,11 @@ nav a:active{
 footer{
     text-align: center;
     background: #3d9dca;
-    padding: 2px 0;
+    padding: 6px 0;
 }
 
 #Univille{
     position: relative;
     width: 4%;
-    margin: 0.5px;
+    margin: 0.5px 0.5px;
 }
