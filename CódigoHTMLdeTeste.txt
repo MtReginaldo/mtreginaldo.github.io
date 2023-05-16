@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Quem Sou Eu</title>
+        <link rel="stylesheet" href="jogo.css">
+        <link
+        rel="stylesheet"
+        href="https://pyscript.net/latest/pyscript.css"
+    />
+    <link rel="stylesheet" href="./assets/css/examples.css" />
+    <script defer src="pergunta.js"></script>
+</head>
+
+<body>
+    <div class = "tudo">
+
+        <div class="escolhas">
+            <div class="escolhido">
+                <form>
+                    <label for="personagens">Personagem escolhido pelo Jogador:</label>
+                    <select id="personagens" name="personagens">
+                        <option value="personagen"> Selecione um personagem </option>
+                        <option value="personagen"> Buzz Lightear </option>
+                        <option value="personagen"> Dexter </option>
+                        <option value="personagen"> Dick Vigarista </option>
+                        <option value="personagen"> Doutora Brinquedos </option>
+                        <option value="personagen"> Edna Moda </option>
+                        <option value="personagen"> Eustácio </option>
+                        <option value="personagen"> Fred Flinstone </option>
+                        <option value="personagen"> Girafales </option>
+                        <option value="personagen"> Guido </option>
+                        <option value="personagen"> Johnny Bravo </option>
+                        <option value="personagen"> Linguini </option>
+                        <option value="personagen"> Lula Molusco </option>
+                        <option value="personagen"> Mario </option>
+                        <option value="personagen"> Popeye </option>
+                        <option value="personagen"> Earl </option>
+                        <option value="personagen"> Prefeito </option>
+                        <option value="personagen"> Sherlock Holmes </option>
+                        <option value="personagen"> Vicky </option>
+                        <option value="personagen"> Woody </option>                               
+                        <option value="personagen"> Homer Simpson </option>                               
+                    </select>
+                  </form>    
+            </div>  
+
+        <div class="container">
+            <div id="text"><b>Quem sou Eu? V-0.1</b></div>
+            
+            <p>Possíveis personagens da IA</p>
+            <div class="imgcontainer" id="imageContainer"></div>
+            <ul id="removerPersonagensJogador"></ul>
+
+            <p>Possíveis personagens do Jogador (Será apagado depois)</p>
+            <ul id="removerPersonagensIA"></ul>
+        </div>
+        
+        <div class = "acontainer">
+            <div class = "zcontainer">
+                <p> Faça sua pergunta:</p>
+                <div class = "cLinha"> 
+                    <div class="fundopergunta">
+                        <p id="pergunta"></p>
+                    </div>
+                    <button onclick="proximaPergunta()">Próxima Pergunta</button>
+                    <button onclick="perguntarApagar()">Perguntar</button>
+                </div>
+            </div>
+                <div>
+                    <div class="cola" id="personagem"></div>
+                    <div class="cola" id="indiceRobo"></div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</body>
+</html>
