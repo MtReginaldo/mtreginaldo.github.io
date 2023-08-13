@@ -78,9 +78,12 @@ nav a:active{
 }
 
 footer{
-    text-align: center;
     background: #3d9dca;
-    padding: 6px 0;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 #Univille{

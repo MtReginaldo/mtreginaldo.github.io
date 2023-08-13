@@ -2,23 +2,70 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>Quem Sou Eu</title>
-        <link rel="stylesheet" href="jogo.css">
+        <title>Quem Sou Eu?</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="jogo2.css">
         <link
         rel="stylesheet"
         href="https://pyscript.net/latest/pyscript.css"
     />
     <link rel="stylesheet" href="./assets/css/examples.css" />
     <script defer src="pergunta.js"></script>
-</head>
 
-<body>
-    <div class = "tudo">
+    <link href="
+        https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css
+        " rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    </head>
 
-        <div class="escolhas">
-            <div class="escolhido">
+
+    <body>
+        <header>
+            <h1><img id="LogoJogo" src="img/logojogo.png" alt="LogoJogo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="mododejogar.html">Modo de Jogar</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="index.html">Sair</a></li>
+                </ul>
+            </nav>
+            <div class="caixa">
+            </div>
+        </header>        
+        <div class = "Personagens">
+            <p id = "EscolhaPersonagem">Possíveis personagens:</p>
+            <div class="imgcontainer">
+                <img id="Buzz" src="img/Buzz.png" alt="Imagem">
+                <img id="Dexter" src="img/Dexter.png" alt="Imagem">
+                <img id="dick" src="img/dick.png" alt="Imagem">
+                <img id="Doutora" src="img/Doutora.png" alt="Imagem">
+                <img id="Earl" src="img/Earl.png" alt="Imagem">
+                <img id="Edna" src="img/Edna.png" alt="Imagem">
+                <img id="Eustacio" src="img/Eustacio.png" alt="Imagem">
+                <img id="Fred" src="img/Fred.png" alt="Imagem">
+                <img id="Girafales" src="img/Girafales.png" alt="Imagem">
+                <img id="Guido" src="img/Guido.png" alt="Imagem">
+                <img id="Homer" src="img/Homer.png" alt="Imagem">
+                <img id="Johnny" src="img/Johnny.png" alt="Imagem">
+                <img id="Linguini" src="img/Linguini.png" alt="Imagem">
+                <img id="Lula" src="img/Lula.png" alt="Imagem">
+                <img id="Mario" src="img/Mario.png" alt="Imagem">
+                <img id="Popeye" src="img/Popeye.png" alt="Imagem">
+                <img id="Prefeito" src="img/Prefeito.png" alt="Imagem">
+                <img id="Sherlock" src="img/Sherlock.png" alt="Imagem">
+                <img id="Vicky" src="img/Vicky.png" alt="Imagem">
+                <img id="Woody" src="img/Woody.png" alt="Imagem">
+            </div>
+            <div class="listas">
+            <ul id="removerPersonagensJogador"></ul>
+            <p>Possíveis personagens do Jogador (Será apagado depois)</p>
+            <ul id="removerPersonagensIA"></ul>
+            </div>
+        </div>
+        <div class = Escolha>
+            <div class = "PersonagemJogador">
                 <form>
-                    <label for="personagens">Personagem escolhido pelo Jogador:</label>
+                    <label id = "EscolhaPersonagem" for="personagens">Selecione o seu personagem:</label>
                     <select id="personagens" name="personagens">
                         <option value="personagen"> Selecione um personagem </option>
                         <option value="personagen"> Buzz Lightear </option>
@@ -42,23 +89,10 @@
                         <option value="personagen"> Woody </option>                               
                         <option value="personagen"> Homer Simpson </option>                               
                     </select>
-                  </form>    
-            </div>  
-
-        <div class="container">
-            <div id="text"><b>Quem sou Eu? V-0.1</b></div>
-            
-            <p>Possíveis personagens da IA</p>
-            <div class="imgcontainer" id="imageContainer"></div>
-            <ul id="removerPersonagensJogador"></ul>
-
-            <p>Possíveis personagens do Jogador (Será apagado depois)</p>
-            <ul id="removerPersonagensIA"></ul>
-        </div>
-        
-        <div class = "acontainer">
-            <div class = "zcontainer">
-                <p> Faça sua pergunta:</p>
+                </form> 
+            </div>
+            <div class = "perguntas">
+                <p>Escolha sua pergunta:</p>
                 <div class = "cLinha"> 
                     <div class="fundopergunta">
                         <p id="pergunta"></p>
@@ -66,13 +100,15 @@
                     <button onclick="proximaPergunta()">Próxima Pergunta</button>
                     <button onclick="perguntarApagar()">Perguntar</button>
                 </div>
-            </div>
-                <div>
-                    <div class="cola" id="personagem"></div>
-                    <div class="cola" id="indiceRobo"></div>
-                </div>  
+                    <div>
+                        <div class="cola" id="personagem"></div>
+                        <div class="colaid" id="indiceRobo"></div>
+                    </div>  
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
+    <footer>
+        <img id = "Univille" src="img/logoUniville.png" alt="Univille">
+    </footer>
 </html>
