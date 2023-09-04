@@ -1,5 +1,6 @@
-![menu](quem-sou-eu-personagens/img/menu-img.png) 
-
+<p align="center">
+  <img src="img/menu-img.png" />
+</p>
 
  **Quem Sou eu?**
 **quem-sou-eu-personagens**
