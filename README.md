@@ -4,6 +4,8 @@
 
  **Quem Sou eu?**
  
+[Jogar](https://mtreginaldo.github.io/quem-sou-eu-personagens/)
+
 **quem-sou-eu-personagens**
 -
 
